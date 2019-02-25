@@ -1,0 +1,545 @@
+/*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+ 
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+}
+
+#hero {
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+#content {
+  margin-top: -1.5em;
+  background-color: #ffffff;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  position: fixed;
+  z-index: -1;
+}
+
+#hero-mobile {
+  display: none;
+  background: url("../res/mobiletitle-01.png") no-repeat center bottom/cover;
+  height: 450px;
+}
+
+p {
+  color: #000000;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 10px;
+
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+article {
+  position: relative;
+  z-index: 0;
+  transition: transform 0.2s ease-out;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 46px 4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 46px 4px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 46px 4px rgba(0,0,0,0.75);
+}
+
+article:hover {
+  z-index: 1;
+  transform: scale(1.2);
+  overflow: hidden;
+}
+
+article:hover .article-title {
+  opacity: 1;
+}
+
+article:hover .article-img {
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(5px);
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+
+.overlay{
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+ article:hover > .overlay {
+   position: absolute;
+   top: 0;
+   width:120%;
+   height:120%;
+   left: 0;
+   background-color:#000;
+   opacity:0.7;
+   z-index: 0;
+   display: block;
+ }
+
+
+.article-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-out;
+
+}
+
+.article-title {
+  color: white;
+  position: absolute;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  z-index: 100;
+
+
+}
+
+#hero,
+.layer {
+  min-height: 800px;
+}
+
+.layer-bg {
+  background: #fcee21; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #fcee21 1%, #d4145a 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #fcee21 1%,#d4145a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #fcee21 1%,#d4145a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcee21', endColorstr='#d4145a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.layer-1 {
+  background-image: url("../res/6-01.png");
+}
+
+.layer-2 {
+  background-image: url("../res/5-01.png");
+}
+
+.layer-3 {
+  background-image: url("../res/4-01.png");
+}
+
+.layer-4 {
+  background-image: url("../res/3-01.png");
+}
+
+.layer-5 {
+  background-image: url("../res/2-01.png");
+}
+
+.svg1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  -webkit-filter: drop-shadow(0px -5px 10px rgba(0,0,0,0.1));
+  filter: drop-shadow(0px -5px 10px rgba(0,0,0,0.1));
+  /* set height to pixels if you want angle to change with screen width */
+}
+
+.svg2 {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 7vw;
+  -webkit-filter: drop-shadow(0px 5px 10px rgb(0, 0, 0));
+  filter: drop-shadow(0px 5px 5px rgb(0, 0, 0));
+
+  /* set height to pixels if you want angle to change with screen width */
+}
+
+.svg3 {
+  display:block;
+  position: absolute;
+  height: 7vw;
+  width: 110%;
+  z-index: 100;
+  -webkit-filter: drop-shadow(0px 4px 2px rgb(0, 0, 0));
+  filter: drop-shadow(0px 4px 2px rgb(0, 0, 0));
+
+  /* set height to pixels if you want angle to change with screen width */
+}
+
+.svg4 {
+  display:block;
+  position: absolute;
+  height: 7vw;
+  width: 110%;
+  bottom: 0;
+  z-index: 100;
+  -webkit-filter: drop-shadow(0px -5px 10px rgba(0,0,0,1));
+  filter: drop-shadow(0px -5px 10px rgba(0,0,0,1));
+  /* set height to pixels if you want angle to change with screen width */
+}
+
+
+
+
+
+.container{
+  background: white;
+}
+
+@media only screen and (max-width: 768px) {
+  #hero {
+    display: none;
+  }
+
+  #hero-mobile {
+    display: block;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
+.container-flex{
+  display: flex;
+  flex-direction: row;
+  width: 110%;
+  margin-left: -5%;
+  margin-right: -5%;
+  background: black;
+}
+
+.child-flex{
+  height: 1200px;
+  width: 25%;
+  margin-right-left: -2px;
+  transform: skew(-10deg);
+  transition: width 0.5s ease-out;
+  overflow: hidden;
+}
+
+.child-flex:hover{
+  width: 50%;
+}
+
+
+
+.bg-flex{
+  height: 1200px;
+  width: 150%;
+  object-fit: cover;
+  position: absolute;
+  margin-left: -20%;
+  transform: skew(10deg);
+  background: black;
+}
+.bg-flex-video{
+  height: 100%;
+  width: 122%;
+  object-fit: cover;
+  left: 0;
+  transform: skew(10deg);
+  display: block;
+}
+
+.text-flex{
+  display:block;
+  margin-left: 20%;
+  margin-right: 20%;
+  position: absolute;
+  z-index: 10;
+  transform: skew(10deg);
+  margin-top: 600px;
+  height: 10%;
+  opacity: 0.2;
+  color: white;
+  transition: opacity 0.5s ease-out;
+
+}
+
+.child-flex:hover > .text-flex {
+  opacity: 1;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+
+nav#dot-nav {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 9999;
+}
+
+nav#dot-nav a {
+  border: 1px solid #121212;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  display: block;
+  margin: 10px;
+}
+
+
+/*SHOWS*/
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline > li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #e80007;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+ul.timelinedone {
+  list-style-type: none;
+  position: relative;
+}
+ul.timelinedone:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timelinedone > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timelinedone > li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #bcbcbc;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+
+
+/*---------------------------------------------------------*/
+
+/* Wrapper */
+.icon-button {
+  background-color: #222222;
+  border-radius: 2.6rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.3rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  margin: 0 5px;
+  position: relative;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 2.6rem;
+}
+
+/* Circle */
+.icon-button span {
+  border-radius: 0;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 0;
+}
+.icon-button:hover span {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 2.6rem;
+  margin: -1.3rem;
+}
+
+/* Icons */
+.icon-button i {
+  background: none;
+  color: white;
+  height: 2.6rem;
+  left: 0;
+  line-height: 2.6rem;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 2.6rem;
+  z-index: 10;
+}
+
+
+
+
+
+.twitter span {
+  background-color: #4099ff;
+}
+.facebook span {
+  background-color: #3B5998;
+}
+.google-plus span {
+  background-color: #db5a3c;
+}
+.tumblr span {
+  background-color: #34526f;
+}
+.instagram span {
+  background-color: #517fa4;
+}
+.youtube span {
+  background-color: #bb0000;
+}
+.pinterest span {
+  background-color: #cb2027;
+}
+
+
+
+.icon-button .icon-twitter {
+  color: #4099ff;
+}
+.icon-button .icon-facebook {
+  color: #3B5998;
+}
+.icon-button .fa-tumblr {
+  color: #34526f;
+}
+.icon-button .icon-google-plus {
+  color: #db5a3c;
+}
+.icon-button .fa-instagram {
+  color: #ffffff;
+}
+.icon-button .fa-youtube {
+  color: #ffffff;
+}
+.icon-button .fa-pinterest {
+  color: #ffffff;
+}
+
+
+
+
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus,
+.icon-button:hover .fa-tumblr,
+.icon-button:hover .fa-instagram,
+.icon-button:hover .fa-youtube,
+.icon-button:hover .fa-pinterest {
+  color: white;
+}
+
+@media all and (max-width: 680px) {
+  .icon-button {
+    border-radius: 1.6rem;
+    font-size: 0.8rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  .icon-button:hover span {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 1.6rem;
+    margin: -0.8rem;
+  }
+
+  /* Icons */
+  .icon-button i {
+    height: 1.6rem;
+    line-height: 1.6rem;
+    width: 1.6rem;
+  }
+  body {
+
+    padding: 10px;
+  }
+  .pinterest {
+    display: none;
+  }
+
+}
