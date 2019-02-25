@@ -236,7 +236,9 @@ article:hover .article-img {
     flex-direction: row;
     align-items: stretch;
   }
-
+  #coses-verticals{
+    display: none;
+  }
 
 }
 
@@ -536,10 +538,7 @@ ul.timelinedone > li:before {
     line-height: 1.6rem;
     width: 1.6rem;
   }
-  body {
 
-    padding: 10px;
-  }
   .pinterest {
     display: none;
   }
